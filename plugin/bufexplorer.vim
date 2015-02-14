@@ -90,6 +90,7 @@ command! BufExplorer :call BufExplorer()
 command! ToggleBufExplorer :call ToggleBufExplorer()
 command! BufExplorerHorizontalSplit :call BufExplorerHorizontalSplit()
 command! BufExplorerVerticalSplit :call BufExplorerVerticalSplit()
+command! BufExplorerMRUDebug :call BufExplorerMRUDebug()
 
 " Set {{{2
 function! s:Set(var, default)
@@ -340,6 +341,11 @@ endfunction
 function! BufExplorerVerticalSplit()
     let s:splitMode = "vsp"
     execute "BufExplorer"
+endfunction
+
+" BufExplorerMRUDebug {{{2
+function! BufExplorerMRUDebug()
+    let s:MRUList = []
 endfunction
 
 " ToggleBufExplorer {{{2
